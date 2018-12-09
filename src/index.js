@@ -1,19 +1,19 @@
 const got = require("got");
 const TC_API_PREFIX = "https://www.threatcrowd.org/searchApi/v2/";
 const API = {
-	getAntivirusURL(item) {
+	getAntivirus(item) {
 		return TC_API_PREFIX + "antivirus/report/?antivirus=``" + item;
 	},
-	getFileURL(item) {
+	getFile(item) {
 		return TC_API_PREFIX + "file/report/?resource=" + item;
 	},
-	getIPURL(item) {
+	getIP(item) {
 		return TC_API_PREFIX + "ip/report/?ip=" + item;
 	},
-	getEmailURL(item) {
+	getEmail(item) {
 		return TC_API_PREFIX + "email/report/?email=" + item;
 	},
-	getDomainURL(item) {
+	getDomain(item) {
 		return TC_API_PREFIX + "domain/report/?domain=" + item;
 	}
 };

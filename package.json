@@ -1,6 +1,6 @@
 {
 	"name": "threatcrowd-api",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "ThreadCrowd.com API for JS",
 	"main": "./src/index.js",
 	"author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
