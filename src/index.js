@@ -24,7 +24,7 @@ module.exports = Object.keys(API)
 			[a]: async item => {
 				try {
 					const {body} = await got(API[a](item))
-					return body
+					return JSON.parse(body)
 				} catch (e) {
 					throw new Error("Cannot get threatcrowd data")
 				}
