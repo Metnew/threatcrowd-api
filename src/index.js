@@ -21,7 +21,14 @@ const API = {
 module.exports = Object.keys(API)
 	.map(a => {
 		return {
-			[a]: async item => got(API[a](item))
+			[a]: async item => {
+				try {
+					const {body} = await got(API[a](item))
+					return body
+				} catch (e) {
+					throw new Error("Cannot get threatcrowd data")
+				}
+			}
 		};
 	})
 	.reduce((a, b) => {
